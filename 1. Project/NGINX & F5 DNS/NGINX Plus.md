@@ -1,0 +1,145 @@
+---
+category:
+  - NGINX
+tags:
+  - nginx_labs
+published: false
+date: 2025-06-17T15:33:00
+excalidraw-plugin: parsed
+excalidraw-open-md: true
+---
+# Installation (Ubuntu)
+NGINX Plus can be installed on the following versions of Debian or Ubuntu:
+
+1. Download the SSL certificate, private key, and the JWT license file associated with your NGINX Plus subscription from the MyF5 Customer Portal:
+    - Log in to [MyF5](https://my.f5.com/manage/s/).
+    - Go to **My Products & Plans > Subscriptions** to see your active subscriptions.
+    - Find your NGINX products or services subscription, and select the **Subscription ID** for details.
+    - Download the **nginx-repo.crt** and **nginx-repo.key** from the subscription page.
+    - Download the **JSON Web Token** (JWT) from the subscription page.
+    
+2. Create the **/etc/ssl/nginx** directory:
+    ```shell
+    sudo mkdir -p /etc/ssl/nginx
+    ```
+    
+3. Copy the downloaded **.crt** and **.key** files to the **/etc/ssl/nginx/** directory and make sure they are named **nginx-repo.crt** and **nginx-repo.key**:
+    ```shell
+    sudo cp <downloaded-file-name>.crt /etc/ssl/nginx/nginx-repo.crt
+    sudo cp <downloaded-file-name>.key /etc/ssl/nginx/nginx-repo.key
+    ```
+    
+4. Install the prerequisites packages:
+    ```shell
+        sudo apt update && \
+        sudo apt install apt-transport-https \
+                         lsb-release \
+                         ca-certificates \
+                         wget \
+                         gnupg2 \
+                         ubuntu-keyring
+        ```
+        
+5. Download and add NGINX signing key:
+    ```shell
+    wget -qO - https://cs.nginx.com/static/keys/nginx_signing.key \
+        | gpg --dearmor \
+        | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
+    ```
+    
+6. Add the NGINX Plus repository:
+    ```shell
+        printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] \
+        https://pkgs.nginx.com/plus/ubuntu `lsb_release -cs` nginx-plus\n" \
+        | sudo tee /etc/apt/sources.list.d/nginx-plus.list
+        ```
+        
+7. Download the **nginx-plus** apt configuration to **/etc/apt/apt.conf.d**:
+    ```shell
+    sudo wget -P /etc/apt/apt.conf.d https://cs.nginx.com/static/files/90pkgs-nginx
+    ```
+    
+8. Update the repository information:
+    ```shell
+    sudo apt update
+    ```
+    
+9. Install the **nginx-plus** package. Any older NGINX Plus package is automatically replaced.
+    ```shell
+    sudo apt install -y nginx-plus
+    ```
+    
+10. Copy the downloaded JWT file to the **/etc/nginx/** directory and make sure it is named **license.jwt**:
+    ```shell
+    sudo cp <downloaded-file-name>.jwt /etc/nginx/license.jwt
+    ```
+    
+11. Check the `nginx` version to verify that NGINX Plus is installed correctly:
+    ```shell
+    nginx -v
+    ```
+
+
+# Installation Docker
+➜  JWT=$(cat SFA-1653907-F5-trial.jwt) 
+➜  echo $JWT
+```
+lorem epsum
+```
+
+➜  docker login private-registry.nginx.com --username=$JWT --password=none
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+
+WARNING! Your credentials are stored unencrypted in '/home/suhesh/.docker/config.json'.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/go/credential-store/
+
+Login Succeeded
+
+➜  curl https://private-registry.nginx.com/v2/nginx-plus/agent/tags/list --key SFA-1653907-F5-trial.key --cert SFA-1653907-F5-trial.crt  | jq
+```json
+{
+  "name": "nginx-plus/agent",
+  "tags": [
+    "alpine",
+    "amzn",
+    "debian",
+    "r34-ubi-9",
+    "r34-ubi",
+    "r34",
+    "ubi-9",
+    "ubi"
+  ]
+}
+```
+
+`docker pull private-registry.nginx.com/nginx-plus/agent:r34`
+
+`docker images` ---> There should be the nginx-plus image available
+`docker login <my-docker-registry>`
+`docker tag private-registry.nginx.com/nginx-plus/agent:r34 schiz0/nginx-plus:apocalypse`
+`docker push schiz0/nginx-plus:apocalypse`
+```bash 
+sudo docker run --env=NGINX_LICENSE_JWT=$JWT --restart=always --runtime=runc --name khatra_wala_nginx  --mount type=bind,source=/var/www/html,target=/usr/share/nginx/html,readonly --mount type=bind,source=/etc/nginx/,target=/etc/nginx/ 
+  -p 6969:80 -d schiz0/nginx-plus:bodacious
+```
+
+# nginx CLI
+Print help for command-line parameters
+`nginx -h`
+
+**Test the configuration file:**
+NGINX checks the configuration for correct syntax, and then tries to open files referred in the configuration.
+`nginx -t`
+same as -t, but additionally dump configuration files to standard output
+`nginx -T`
+print the NGINX version
+`nginx -v`
+print the NGINX version, compiler version, and configure parameters.
+`nginx -V`
+send a signal to the master process. The argument signal can be one of:
+- stop — shut down quickly
+- quit — shut down gracefully
+- reload — reload configuration, start the new worker process with a new configuration, gracefully shut down old worker processes.
+- reopen — reopen log files
+`nginx -s reload`

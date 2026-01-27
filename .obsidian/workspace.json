@@ -1,0 +1,325 @@
+{
+  "main": {
+    "id": "be035330b2c7c495",
+    "type": "split",
+    "children": [
+      {
+        "id": "3f5a31b4e71cbd2c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1dac4939500c5da3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1. Project/Hackviser/WAF Bypass.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "WAF Bypass"
+            }
+          },
+          {
+            "id": "5e5cadece61549b4",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Family tree.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Family tree"
+            }
+          },
+          {
+            "id": "d0d4563769642f03",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1. Project/F5 Bot detection bypass.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "F5 Bot detection bypass"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "29c96b7c5908158f",
+    "type": "split",
+    "children": [
+      {
+        "id": "668651966d499ffc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "069a8c91f097f07b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "6cdeea07ebd8be64",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "8dfda361a2268870",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "3c37637addf520ed",
+    "type": "split",
+    "children": [
+      {
+        "id": "92cd2db01553e81b",
+        "type": "tabs",
+        "dimension": 35.58341369334619,
+        "children": [
+          {
+            "id": "704b5f07a846a422",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "f08e93f521348fe4",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          },
+          {
+            "id": "edf9004a4c82a70e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "aa64258ef1197f33",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "crackedWifi.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for crackedWifi"
+            }
+          },
+          {
+            "id": "a605d9272134e62a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "crackedWifi.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from crackedWifi"
+            }
+          },
+          {
+            "id": "2d6208703bb9891f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "crackedWifi.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of crackedWifi"
+            }
+          }
+        ]
+      },
+      {
+        "id": "f4bb732fb827dc70",
+        "type": "tabs",
+        "dimension": 34.3297974927676,
+        "children": [
+          {
+            "id": "e5bb2721aafddb61",
+            "type": "leaf",
+            "state": {
+              "type": "timer-view",
+              "state": {},
+              "icon": "timer",
+              "title": "Timer"
+            }
+          }
+        ]
+      },
+      {
+        "id": "120d376ecb6bccd1",
+        "type": "tabs",
+        "dimension": 30.08678881388621,
+        "children": [
+          {
+            "id": "136710f27a32957b",
+            "type": "leaf",
+            "state": {
+              "type": "tagfolder-view",
+              "state": {},
+              "icon": "stacked-levels",
+              "title": "Tag Folder"
+            }
+          },
+          {
+            "id": "a65e5691d7e1d6ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1. Project/BigIP NEXT and BIGIP XC.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "BigIP NEXT and BIGIP XC"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "command-palette:Open command palette": false,
+      "audio-recorder:Start/stop recording": false,
+      "pomodoro-timer:Toggle timer panel": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-kanban:Create new board": false,
+      "obsidian-git:Open Git source control": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "069a8c91f097f07b",
+  "lastOpenFiles": [
+    "2. Programs/test.py",
+    "3. Resource/F5 201 Networks TMOS Administration Study Guide 1.pdf",
+    "1. Project/F5 Bot detection bypass.md",
+    "Contents.md",
+    "Family tree.md",
+    "1. Project/Hackviser/WAF Bypass.md",
+    "1. Project/Hackviser/SSRF.md",
+    "1. Project/Hackviser/CSRF.md",
+    "1. Project/Hackviser/lab.md",
+    "1. Project/Hackviser/XXE wala.md",
+    "1. Project/Hackviser/Race Condition.md",
+    "1. Project/Hackviser/Management.md",
+    "1. Project/Hackviser/nosql lab.md",
+    "1. Project/Hackviser/Hexar.md",
+    "1. Project/Hello.md",
+    "1. Project/Hackviser/Chemy.md",
+    "1. Project/Hackviser/SSTI.md",
+    "1. Project/Hackviser/Untitled",
+    "1. Project/Hackviser",
+    "1. Project/HTB - Conversor.md",
+    "1. Project/HTB - Cap.md",
+    "images/cap-htb-iamroot.png",
+    "images/cap-htb-linpeas-pe2.png",
+    "images/cap-htb-linpeas-pe1.png",
+    "images/cap-htb-ssh.png",
+    "images/cap-htb-lftp.png",
+    "images/cap-htb-ftp-creds.png",
+    "images/cap-htb-data-0.png",
+    "images/cap-htb-endpoint-bruteforce.png",
+    "images/cap-htb-endpoint-brute.png",
+    "images/cap-htb-nmap-version.png",
+    "1. Project/Virtual LAN ( VLAN ).md",
+    "1. Project/Machine - Hackers.md",
+    "1. Project/BigIP DNSSEC.md",
+    "1. Project/Authentication Vulnarabilities.md",
+    "1. Project/NGINX & F5 DNS/NGINX Plus.md",
+    "1. Project/SQL Injection.md",
+    "1. Project/SQLMAP.md",
+    "1. Project/Portswigger_Labs/SQLi-Lab2.md",
+    "1. Project/NGINX & F5 DNS",
+    "2. Programs/RanaKhalil/sqli_lab4.py",
+    "2. Programs/RanaKhalil/sqli_lab3.py",
+    "2. Programs/RanaKhalil/sqli_lab2.py",
+    "2. Programs/RanaKhalil/sqli_lab1.py",
+    "2. Programs/RanaKhalil/sqli_lab1",
+    "2. Programs/RanaKhalil"
+  ]
+}
