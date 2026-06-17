@@ -1,0 +1,53 @@
+---
+category: knowledge
+tags:
+  - web
+platform: n/a
+status: done
+created: 2026-06-17
+aliases:
+  - Self-signed certificate:
+---
+
+- To control SSL traffic that is destined for BIG-IP virtual servers
+- The SSL profile, adds the ability to maintain secure connections between the client system and the BIG-IP system and between the BIG-IP system and a target web server
+- To control SSL traffic that is destined for BIG-IP virtual servers
+- The SSL profile, adds the ability to maintain secure connections between the client system and the BIG-IP system and between the BIG-IP system and a target web server
+## Self-signed certificate:
+A self-signed certificate is signed by the system's own private key own private key.
+- BIG-IP software includes a self-signed SSL certificate named *default* , which can be used to terminate SSL traffic.
+- The Configuration utility page canbe used to renew existing self-signed certificates or create additional self-signed certificates.
+**Process:**
+1. Log in to the Configuration utility.
+2. Go to the  **System** > **Certificate Management** > **Traffic Certificate Management** > **SSL Certificate List** page:
+3. Select **Create**.
+4. Enter a name for the certificate.
+5. In the **Issuer** list, select **Self**.
+6. Configure the **Common Name** setting and the other certificate settings.
+7. Under **Key Properties**, configure an appropriate **Key Type** and **Size**.
+8. Select **Finished**.
+9. Associate the SSL certificate with the appropriate SSL profile.
+
+## CA certificate:
+A CA certificate is signed by a CA's private key. Using a CA certificate allows us to replace the self-signed certificate on each BIG-IP system with a trusted CA certificate, which is a certificate signed by a third party.
+- Authenticating BIG-IP systems using trusted CA certificates is more secure than using self-signed certificates.
+- The Configuration utility provides a set of certificate management pages that allow us to create **certificate signing requests (CSRs)**. The requests can then be sent to the CA for a signature.
+**Process:**
+1. Log in to the Configuration utility.
+2. Go to the **System** > **Certificate Management** > **Traffic Certificate Management** > **SSL Certificate List** page:
+3. Select **Create**.
+4. Enter a unique **Name** for the new SSL certificate and key.
+5. In the **Issuer** list, select **Certificate Authority**.
+6. Enter the required **Common Name**. This value is embedded in the certificate for name-based authentication purposes, and is typically the fully qualified domain name (FQDN) of the server (for example, **[www.domain.com](https://www.domain.com/)**).
+7. Configure other certificate settings.
+8. Under **Key Properties**, configure an appropriate **Key Type** and **Size**.
+9. Optional: If the BIG-IP system supports the FIPS hardware security module (HSM), specify the key type (**FIPS** or **Normal**).
+10. Select **Finished**.
+11. To download the request into a file on the system, complete one of the following tasks:
+    - Copy the certificate from the **Request Text** box.
+    - Select the button in the **Request File** box.
+12. Select **Finished**.
+
+| SSL Offloading   | ![[images/ssl_offloading.png]] |
+| ---------------- | ----------------------- |
+| **SSL Bridging** | ![[images/ssl_bridging.png]]   |

@@ -15,8 +15,23 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "1. Project",
-      "template": "templates/Project.md"
+      "folder": "BugBounty",
+      "template": "Templates/template-bugbounty.md"
+    },
+    {
+      "folder": "Knowledge",
+      "template": "Templates/template-knowledge.md"
+    },
+    {
+      "folder": "Labs",
+      "template": "Templates/template-lab.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
     }
   ],
   "syntax_highlighting": true,
@@ -27,5 +42,6 @@
   "startup_templates": [
     ""
   ],
+  "intellisense_render": 1,
   "enable_ribbon_icon": true
 }
