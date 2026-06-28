@@ -1,0 +1,46 @@
+---
+category: lab
+tags:
+  - training/web
+  - vuln/file-upload
+platform: portswigger
+status: todo
+completed_date:
+created: 2025-06-18
+aliases:
+  - "Web shell upload via obfuscated file extension"
+---
+# Lab: Web shell upload via obfuscated file extension
+
+## Objective
+*What is this lab trying to teach?*
+
+## Why This Works (The Principle)
+- **The vulnerability:** The application allows file uploads but does not properly validate file type, content, or destination.
+- **Root cause:** Server-side checks rely on extension, Content-Type, or client-side validation — all of which are trivially bypassable.
+- **Exploitation:** Upload a web shell with a valid extension (`.php`, `.jsp`, `.war`) inside an image or via path traversal in the filename.
+- **Key insight:** The goal of file upload exploitation is code execution — find where the file lands and access it via a browser.
+
+## Blind Attempt (15-20 min max)
+*Try without any hints. Document everything.*
+- **What I tried:**
+- **Where I got stuck:**
+
+## Hint Usage (if needed)
+- [ ] Used lab hint
+- [ ] Watched first 30s of video solution
+- *Resume blind with new clue. Still stuck?*
+
+## Solution Reconstruction
+*After viewing full solution, close it immediately.*
+- [ ] Step 1:
+- [ ] Step 2:
+- [ ] Step 3:
+- [ ] Final payload / exploit:
+
+## Key Takeaway
+*Write ONE principle I must remember:*
+
+## Next-Day Blind Replay
+- [ ] Solved entirely from memory
+- [ ] Needed to look at: *(write the specific step forgotten)*

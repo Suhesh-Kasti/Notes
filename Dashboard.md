@@ -3,7 +3,7 @@ category: dashboard
 tags:
   - dashboard
   - dataview
-created: 2026-06-17
+created: 2025-06-18
 ---
 
 # Cybersecurity Learning Dashboard
@@ -11,10 +11,10 @@ created: 2026-06-17
 ## Lab Progress
 
 ```dataview
-TABLE platform, status, tags
+TABLE platform, status, file.tags as Tags
 FROM "Labs"
 WHERE category = "lab"
-SORT status ASC
+SORT file.name ASC
 ```
 
 ## Bug Bounty Targets
@@ -28,14 +28,14 @@ SORT status ASC
 ## Vulnerability References
 
 ```dataview
-TABLE file.tags as "Tags"
+TABLE file.tags as Tags
 FROM "Knowledge"
 WHERE contains(file.tags, "vuln/")
 ```
 
 ## Quick Links
 
-- [[Labs/]] — all lab writeups
+- [[Labs/Pathway]] — master lab checklist
+- [[Labs/Kanban]] — drag-and-drop Kanban board
 - [[Knowledge/]] — all reference notes
 - [[BugBounty/]] — all target writeups
-- [[Kanban]] — lab Kanban board
